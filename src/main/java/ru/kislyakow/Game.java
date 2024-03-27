@@ -11,27 +11,20 @@ public class Game {
     }
 
     public void gameLoop() {
-        InputCoordinates inputCoordinates = new InputCoordinates();
         boolean isWhiteMove = true;
         while(true) {
             renderer.render(board);
 
             System.out.print("[From] ");
-            Coordinates coordinatesFrom = inputCoordinates.input();
+            Coordinates coordinatesFrom = InputCoordinates.inputCoordinatesForColor(isWhiteMove ? Color.WHITE : Color.BLACK, board);
 
             System.out.print("[To] ");
-            Coordinates coordinatesTo = inputCoordinates.input();
-
-            if (board.isSquareEmpty(coordinatesFrom)) continue;
-
             Piece piece = board.getPiece(coordinatesFrom);
-            if (isWhiteMove && piece.color != Color.WHITE) continue;
-            else if (!isWhiteMove && piece.color != Color.BLACK) continue;
+            Coordinates coordinatesTo = InputCoordinates.inputAvailableCoordinates(piece.getAvailableMoveSquares(board));
 
-            if (piece.getAvailableMoveSquares(board).contains(coordinatesTo)) {
-                board.movePiece(coordinatesFrom, coordinatesTo);
-                isWhiteMove = !isWhiteMove;
-            }
+            board.movePiece(coordinatesFrom, coordinatesTo);
+
+            isWhiteMove = !isWhiteMove;
         }
     }
 }

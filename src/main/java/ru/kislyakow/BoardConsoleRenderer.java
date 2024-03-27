@@ -13,7 +13,11 @@ public class BoardConsoleRenderer {
 
 
     public void render(Board board) {
-        for (int file = 8; file >= 1; file--) {
+        for (int file = 8; file >= 0; file--) {
+            if (file == 0) {
+                System.out.println(" A  B  C  D  E  F  G  H ");
+                continue;
+            }
             for (int rank = 1; rank <= 8 ; rank++) {
                 Coordinates coordinates = new Coordinates(rank, file);
 
@@ -24,7 +28,7 @@ public class BoardConsoleRenderer {
                 }
 
             }
-            System.out.println(ANSI_RESET);
+            System.out.println(ANSI_RESET + " " +  file);
         }
     }
 
