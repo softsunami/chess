@@ -8,7 +8,6 @@ import java.util.Set;
 public class InputCoordinates {
     public static Coordinates inputCoordinatesForColor(Color color, Board board) {
         while (true) {
-            System.out.println("Input piece's square");
             Coordinates coordinates = input();
 
             if (board.isSquareEmpty(coordinates)) {
