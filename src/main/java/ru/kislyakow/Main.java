@@ -7,8 +7,7 @@ public class Main {
 //        Game game = new Game(board);
 //        game.gameLoop();
 
-        BoardFactory factory = new BoardFactory();
-        Board board = factory.fromFen("r1bqkbKr/pppppppp/n4n2/3Q4/5B2/P7/1PPPPPPP/RN3BNR");
+        Board board = BoardFactory.setupDefaultPosition();
 
         BoardConsoleRenderer renderer = new BoardConsoleRenderer();
         renderer.render(board);

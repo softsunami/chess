@@ -4,7 +4,7 @@ import ru.kislyakow.Pieces.*;
 
 public class BoardFactory {
 
-    public Board fromFen(String fen) {
+    public static Board fromFen(String fen) {
         Board board = new Board();
         String[] fens = fen.split("/");
 
@@ -26,7 +26,11 @@ public class BoardFactory {
         return board;
     }
 
-    private Piece getPieceFromAlias(char alias, Coordinates coordinates) {
+    public static Board setupDefaultPosition() {
+        return fromFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+    }
+
+    private static Piece getPieceFromAlias(char alias, Coordinates coordinates) {
         Color color;
 
         if (Character.isUpperCase(alias)) color = Color.WHITE;

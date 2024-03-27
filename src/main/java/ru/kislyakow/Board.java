@@ -22,15 +22,6 @@ public class Board {
         setPiece(coordinatesTo, piece);
     }
 
-    public void setupDefaultPiecesPosition() {
-        BoardSetupUtil.setupDefaultPawns(this);
-        BoardSetupUtil.setupDefaultRook(this);
-        BoardSetupUtil.setDefaultBishop(this);
-        BoardSetupUtil.setupDefaultKnights(this);
-        BoardSetupUtil.setupDefaultKings(this);
-        BoardSetupUtil.setupDefaultQueens(this);
-    }
-
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !piecesMap.containsKey(coordinates);
     }
