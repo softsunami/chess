@@ -36,18 +36,17 @@ public class BoardUtils {
     public static List<Coordinates> getDiagonalCoordinatesBetween(Coordinates source, Coordinates to) {
         if (Math.abs(source.rank - to.rank) != Math.abs(source.file - to.file)) return Collections.emptyList();
 
-        List<Coordinates> coordinatesList = new ArrayList<>();
+        List<Coordinates> result = new ArrayList<>();
 
         int shiftRank = source.rank > to.rank ? -1 : 1;
         int shiftFile = source.file > to.file ? -1 : 1;
 
-        for (int rank = source.rank, file = source.file; rank != to.rank;) {
+        for (int rank = source.rank + shiftRank, file = source.file + shiftFile; rank != to.rank;) {
+            result.add(new Coordinates(rank, file));
             rank += shiftRank;
             file += shiftFile;
-
-            coordinatesList.add(new Coordinates(rank, file));
         }
 
-        return coordinatesList;
+        return result;
     }
 }

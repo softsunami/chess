@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Coordinates {
 //    rank - x, file - y
-    int rank, file;
+    public int rank, file;
 
     @Override
     public String toString() {

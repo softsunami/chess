@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Rook extends Piece{
+public class Rook extends LongRangePiece {
     public Rook(Coordinates coordinates, Color color) {
         super(coordinates, color);
     }
@@ -22,24 +22,5 @@ public class Rook extends Piece{
         }
 
         return result;
-    }
-
-    @Override
-    protected boolean isSquareAvailableToMove(Coordinates coordinates, Board board) {
-        if (!super.isSquareAvailableToMove(coordinates, board)) return false;
-
-        List<Coordinates> verticalCoordinates = BoardUtils.getVerticalCoordinatesBetween(this.coordinates, coordinates);
-        List<Coordinates> horizontalCoordinates = BoardUtils.getHorizontalCoordinatesBetween(this.coordinates, coordinates);
-
-
-        for (Coordinates coordinates1 : verticalCoordinates) {
-            if (!board.isSquareEmpty(coordinates1)) return false;
-        }
-
-        for (Coordinates coordinates1 : horizontalCoordinates) {
-            if (!board.isSquareEmpty(coordinates1)) return false;
-        }
-
-        return true;
     }
 }
