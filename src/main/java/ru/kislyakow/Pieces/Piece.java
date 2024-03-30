@@ -39,6 +39,4 @@ abstract public class Piece {
     }
 
     protected abstract Set<CoordinatesShift> getPieceMoves();
-
-
 }

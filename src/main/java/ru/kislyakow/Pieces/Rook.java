@@ -26,8 +26,7 @@ public class Rook extends Piece{
 
     @Override
     protected boolean isSquareAvailableToMove(Coordinates coordinates, Board board) {
-        boolean result = super.isSquareAvailableToMove(coordinates, board);
-        if (!result) return false;
+        if (!super.isSquareAvailableToMove(coordinates, board)) return false;
 
         List<Coordinates> verticalCoordinates = BoardUtils.getVerticalCoordinatesBetween(this.coordinates, coordinates);
         List<Coordinates> horizontalCoordinates = BoardUtils.getHorizontalCoordinatesBetween(this.coordinates, coordinates);

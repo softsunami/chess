@@ -50,7 +50,7 @@ public class InputCoordinates {
         char rankChar, fileChar;
         while(true) {
             System.out.println("Enter coordinates (ex A1): ");
-            String line = scanner.nextLine();
+            String line = scanner.nextLine().toUpperCase();
 
             if (line.length() != 2) {
                 System.out.println("Invalid format, try again");
