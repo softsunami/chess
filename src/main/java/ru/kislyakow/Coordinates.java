@@ -6,6 +6,14 @@ public class Coordinates {
 //    rank - x, file - y
     int rank, file;
 
+    @Override
+    public String toString() {
+        return "Coordinates{" +
+                "rank=" + rank +
+                ", file=" + file +
+                '}';
+    }
+
     public Coordinates(int rank, int file) {
         this.rank = rank;
         this.file = file;

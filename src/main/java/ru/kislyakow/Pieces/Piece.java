@@ -32,7 +32,7 @@ abstract public class Piece {
         return result;
     }
 
-    private boolean isSquareAvailableToMove(Coordinates coordinates, Board board) {
+    protected boolean isSquareAvailableToMove(Coordinates coordinates, Board board) {
         if (board.isSquareEmpty(coordinates)) return true;
         if (board.getPiece(coordinates).color != color) return true;
         return false;

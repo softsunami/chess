@@ -17,9 +17,11 @@ public class Game {
 
             System.out.print("[From] ");
             Coordinates coordinatesFrom = InputCoordinates.inputCoordinatesForColor(isWhiteMove ? Color.WHITE : Color.BLACK, board);
+            Piece piece = board.getPiece(coordinatesFrom);
+
+            renderer.render(board, piece);
 
             System.out.print("[To] ");
-            Piece piece = board.getPiece(coordinatesFrom);
             Coordinates coordinatesTo = InputCoordinates.inputAvailableCoordinates(piece.getAvailableMoveSquares(board));
 
             board.movePiece(coordinatesFrom, coordinatesTo);
