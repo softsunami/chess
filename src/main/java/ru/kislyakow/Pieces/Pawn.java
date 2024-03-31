@@ -1,9 +1,8 @@
 package ru.kislyakow.Pieces;
 
-import ru.kislyakow.Color;
-import ru.kislyakow.Coordinates;
-import ru.kislyakow.CoordinatesShift;
+import ru.kislyakow.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Pawn extends Piece{
@@ -13,6 +12,34 @@ public class Pawn extends Piece{
 
     @Override
     protected Set<CoordinatesShift> getPieceMoves() {
-        return null;
+        Set<CoordinatesShift> result = new HashSet<>();
+
+
+        if (color == Color.WHITE) {
+            if (coordinates.file == 2) result.add(new CoordinatesShift(0, 2));
+            result.add(new CoordinatesShift(0, 1));
+            result.add(new CoordinatesShift(1, 1));
+            result.add(new CoordinatesShift(-1, 1));
+        } else {
+            if (coordinates.file == 7) result.add(new CoordinatesShift(0, -2));
+            result.add(new CoordinatesShift(0, -1));
+            result.add(new CoordinatesShift(1, -1));
+            result.add(new CoordinatesShift(-1, -1));
+        }
+
+        return result;
+    }
+
+    @Override
+    protected boolean isSquareAvailableToMove(Coordinates coordinates, Board board) {
+        if (!super.isSquareAvailableToMove(coordinates, board)) return false;
+
+        if (coordinates.rank == this.coordinates.rank) {
+            if (BoardUtils.getVerticalCoordinatesBetween(this.coordinates, coordinates).isEmpty()) {
+                return board.isSquareEmpty(coordinates);
+            } else return false;
+        } else {
+            return !board.isSquareEmpty(coordinates);
+        }
     }
 }

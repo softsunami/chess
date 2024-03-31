@@ -33,4 +33,13 @@ public class Board {
     public static boolean isSquareDark(Coordinates coordinates) {
         return (coordinates.file + coordinates.rank) % 2 == 0;
     }
+
+    public boolean isSquareAttackedByColor(Coordinates coordinates, Color color) {
+        for (Piece piece : piecesMap.values()) {
+            if (piece.color == color) {
+                if (piece.getAvailableMoveSquares(this).contains(coordinates)) return true;
+            }
+        }
+        return false;
+    }
 }
