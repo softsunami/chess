@@ -1,4 +1,4 @@
-package ru.kislyakow;
+package ru.kislyakow.Coordinates;
 
 import java.util.Objects;
 

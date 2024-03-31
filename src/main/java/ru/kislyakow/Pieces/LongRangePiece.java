@@ -1,12 +1,10 @@
 package ru.kislyakow.Pieces;
 
-import ru.kislyakow.Board;
-import ru.kislyakow.BoardUtils;
-import ru.kislyakow.Color;
-import ru.kislyakow.Coordinates;
+import ru.kislyakow.Board.Board;
+import ru.kislyakow.Board.BoardUtils;
+import ru.kislyakow.Coordinates.Coordinates;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 abstract public class LongRangePiece extends Piece {

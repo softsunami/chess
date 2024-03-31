@@ -1,4 +1,4 @@
-package ru.kislyakow;
+package ru.kislyakow.Pieces;
 
 public enum Color {
     WHITE,

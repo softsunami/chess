@@ -1,5 +1,10 @@
 package ru.kislyakow;
 
+import ru.kislyakow.Board.Board;
+import ru.kislyakow.Board.BoardConsoleRenderer;
+import ru.kislyakow.Coordinates.Coordinates;
+import ru.kislyakow.Coordinates.InputCoordinates;
+import ru.kislyakow.Pieces.Color;
 import ru.kislyakow.Pieces.Piece;
 
 public class Game {

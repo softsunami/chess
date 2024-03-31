@@ -1,6 +1,6 @@
 package ru.kislyakow.Pieces;
 
-import ru.kislyakow.CoordinatesShift;
+import ru.kislyakow.Coordinates.CoordinatesShift;
 
 import java.util.HashSet;
 import java.util.Set;

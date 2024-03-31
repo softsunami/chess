@@ -1,4 +1,6 @@
-package ru.kislyakow;
+package ru.kislyakow.Board;
+
+import ru.kislyakow.Coordinates.Coordinates;
 
 import java.util.ArrayList;
 import java.util.Collections;

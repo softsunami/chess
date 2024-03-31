@@ -1,5 +1,7 @@
-package ru.kislyakow;
+package ru.kislyakow.Coordinates;
 
+import ru.kislyakow.Board.Board;
+import ru.kislyakow.Pieces.Color;
 import ru.kislyakow.Pieces.Piece;
 
 import java.util.Scanner;

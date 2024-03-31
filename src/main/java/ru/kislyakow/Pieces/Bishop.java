@@ -1,8 +1,8 @@
 package ru.kislyakow.Pieces;
 
-import ru.kislyakow.*;
+import ru.kislyakow.Coordinates.Coordinates;
+import ru.kislyakow.Coordinates.CoordinatesShift;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Bishop extends LongRangePiece implements IBishop {

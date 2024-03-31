@@ -1,4 +1,4 @@
-package ru.kislyakow;
+package ru.kislyakow.Coordinates;
 
 public class CoordinatesShift {
     public final int rankShift, fileShift;

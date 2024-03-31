@@ -1,6 +1,9 @@
 package ru.kislyakow.Pieces;
 
-import ru.kislyakow.*;
+import ru.kislyakow.Board.Board;
+import ru.kislyakow.Board.BoardUtils;
+import ru.kislyakow.Coordinates.Coordinates;
+import ru.kislyakow.Coordinates.CoordinatesShift;
 
 import java.util.HashSet;
 import java.util.Set;

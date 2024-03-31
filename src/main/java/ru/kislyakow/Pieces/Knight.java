@@ -1,8 +1,7 @@
 package ru.kislyakow.Pieces;
 
-import ru.kislyakow.Color;
-import ru.kislyakow.Coordinates;
-import ru.kislyakow.CoordinatesShift;
+import ru.kislyakow.Coordinates.Coordinates;
+import ru.kislyakow.Coordinates.CoordinatesShift;
 
 import java.util.HashSet;
 import java.util.Set;

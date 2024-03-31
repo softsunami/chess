@@ -1,6 +1,7 @@
-package ru.kislyakow;
+package ru.kislyakow.Board;
 
-import ru.kislyakow.Pieces.Pawn;
+import ru.kislyakow.Pieces.Color;
+import ru.kislyakow.Coordinates.Coordinates;
 import ru.kislyakow.Pieces.Piece;
 
 import java.util.Collections;
